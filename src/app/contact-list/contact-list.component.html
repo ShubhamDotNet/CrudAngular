@@ -1,0 +1,26 @@
+<table border="1">
+  <thead>
+    <td></td>
+    <td>Full name</td>
+    <td>Address</td>
+    <td>Email</td>
+    <td>Phone</td>
+  </thead>
+  <tbody *ngFor="let i of contacts">
+    <td>{{ i.id }}</td>
+    <td>{{ i.fullName }}</td>
+    <td>{{ i.address }}</td>
+    <td>{{ i.email }}</td>
+    <td>{{ i.phone }}</td>
+    <td><button (click)="deleteContact()">Delete</button></td>
+  </tbody>
+</table>
+
+<form action="">
+  Full Name:
+  <input type="text" [(ngModel)]="fullName" name="first" /><br /><br />
+  Address: <input type="text" [(ngModel)]="address" name="first" /><br /><br />
+  Email: <input type="text" [(ngModel)]="email" name="first" /><br /><br />
+  Phone: <input type="text" [(ngModel)]="phone" name="first" /><br /><br />
+</form>
+<button (click)="addContact()">Add Contact</button><br />
